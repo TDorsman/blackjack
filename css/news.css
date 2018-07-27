@@ -1,0 +1,98 @@
+.article {
+  margin: 100px auto;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: auto auto; }
+  .article__item {
+    position: relative;
+    text-align: center;
+    padding: 10px 40px 20px;
+    min-height: 250px;
+    background: #D0CCBD;
+    border-radius: 10px;
+    margin: 10px;
+    -webkit-box-shadow: 7px 11px 24px -1px rgba(0, 0, 0, 0.49);
+    -moz-box-shadow: 7px 11px 24px -1px rgba(0, 0, 0, 0.49);
+    box-shadow: 7px 11px 24px -1px rgba(0, 0, 0, 0.49); }
+    .article__item:hover {
+      background: #B1B0AC;
+      transition: background .5s; }
+    .article__item-content {
+      text-align: left;
+      display: inline-block;
+      font-size: 25px;
+      margin-bottom: 25px;
+      font-family: 'Open Sans Condensed', sans-serif; }
+      .article__item-content--date {
+        position: absolute;
+        bottom: 5px;
+        left: 10px;
+        font-family: 'Fjalla One', sans-serif;
+        font-style: italic; }
+      .article__item-content--source {
+        position: absolute;
+        bottom: 5px;
+        right: 10px;
+        font-family: 'Fjalla One', sans-serif;
+        font-style: italic; }
+    .article__item h1 {
+      display: inline;
+      font-family: 'Fjalla One', sans-serif;
+      margin-bottom: 0px; }
+    .article__item h3 {
+      min-height: 80px;
+      text-align: center;
+      color: black; }
+    .article__item--text {
+      min-height: 80%;
+      font-size: 30px;
+      font-family: 'Amatic SC', cursive; }
+    .article__item-title {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 25px; }
+      .article__item-title img {
+        height: 250px;
+        max-width: 500px;
+        width: auto;
+        display: inline;
+        margin: 0 0 50px; }
+
+.search {
+  align-self: center;
+  position: absolute;
+  right: 5px; }
+  .search__input {
+    border-radius: 10px;
+    padding-left: 5px;
+    background: gray; }
+    .search__input::placeholder {
+      color: white; }
+    .search__input:focus {
+      background: white;
+      color: black; }
+  .search__submit {
+    background: #838076;
+    border-color: gray;
+    color: white;
+    margin-left: 5px; }
+
+.scrollup {
+  display: flex;
+  height: 75px;
+  width: 75px;
+  background: #999595;
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  border-radius: 90px;
+  display: flex;
+  justify-content: center;
+  /* align horizontal */
+  align-items: center;
+  /* align vertical */
+  cursor: pointer; }
+
+.title__header {
+  font-size: 3rem; }
+
+/*# sourceMappingURL=news.css.map */

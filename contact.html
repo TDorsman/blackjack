@@ -1,0 +1,45 @@
+<html>
+<head>
+	<title>News</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Shrikhand|Work+Sans|Fjalla+One|Spirax" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<ul class="navbar">
+			<li class="navbar__item"><a href="index.php">Wiki</a></li>
+			<li class="navbar__item"><a  href="news.html">News</a></li>
+			<li class="navbar__item"><a class="navbar__active" href="contact.html">Contact</a></li>
+			<li class="navbar__item"><a href="#about">About</a></li>
+			<div class="search">
+				<input type="text" class="search__input" placeholder="Search..">
+				<input type="submit" class="search__submit" value="Search">
+			</div>
+		</ul>
+		<div class="wrapper">
+			<div class="title"><h1>Contact me!<h1></div>
+			<div class="form">
+				<div class="form__field" field1>
+					<h3>First name</h3>
+					<input type="text" name="firstname">
+					<h3>Email</h3>
+					<input type="email" name="email">
+				</div>
+				<div class="form__field" field2>
+					<h3>Last name</h3>
+					<input type="text" name="lastname">
+					<h3>Mobile number</h3>
+					<input type="number" name="number">
+				</div>
+				<div class="form__field form__field--comment" field3>
+				<h3>Comment</h3>
+				<textarea class="form__comment"></textarea><br>
+				<button class="form__submit">Submit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <script type="text/javascript" src="news_api.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,93 @@
+	body {
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100vh;
+		background: url('../img/bg.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		overflow: hidden;
+
+	}
+
+	.randombtn {
+		position: absolute;
+		top: 50%;
+		left: calc(50% - 15px);
+	}
+
+	.cards {
+		margin: 5px;
+	}
+
+	.animate {
+		animation: fadein 1.5s forwards linear;
+	}
+
+	.dealerhand {
+		background: url('../img/wood.jpg');
+		text-align: center;
+	}
+
+	.points {
+		background: red;
+		width: 50px;
+		margin: 15px auto;
+		height: 50px;
+		border-radius: 50px;
+		border: 3px solid white;
+		text-align: center;
+		vertical-align: middle;
+		line-height: 50px;
+		color: white;	
+		font-family: 'Russo One', sans-serif;
+	
+	}
+
+	.playerhand {
+		height: 153px;
+		display: block;
+		position: relative;
+		background: url('../img/wood.jpg');
+		text-align: center;
+		border-radius: 10px 10px 0  0;
+	}
+
+	.playerhand__money {
+		color: yellow;
+		font-family: 'Russo One', sans-serif;
+		margin: 5px 20px;
+	}
+
+
+
+	.winnerdisplay {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		font-size: 50px;
+		border-radius: 20px;
+		position: relative;
+		margin: auto;
+		text-align: center;
+		visibility: hidden;
+		font-family: 'Russo One', sans-serif;
+	}
+
+	@keyframes fadein {
+		0% { opacity: 0; }
+		100% { opacity: 1; }
+	}
+
+	@keyframes slidein {
+		from {  left: -1200px;}
+		to { left: 1500px;}
+
+		0% { color: red; }
+		20% {  color: blue; }
+		40% {  color: red; }
+		60% {  color: blue; }
+		80% { color: red; }
+		100% { color: blue; }
+	}

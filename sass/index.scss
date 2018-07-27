@@ -1,0 +1,112 @@
+body {
+	margin: 0;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.title h1 {
+	font-family: 'Playfair Display SC', serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+.navbar {
+	display: flex;
+	position: relative;
+	&__active {
+		color: gray;
+	}
+}
+
+
+.title {
+	text-align: center;
+	margin: 20px 0;
+
+	&__active {
+		color: red;
+	}
+}
+
+.content {
+	 margin: auto;
+	 text-align:center;
+
+	 h2 {
+	 	font-family: 'Spirax', cursive;
+	 }
+
+}
+
+.block {
+	background: red;
+	height:100px
+}
+
+.result {
+		margin: 100px auto;
+		width: 80vw;
+		display: grid;
+		grid-template-columns: auto auto;
+
+		&__item {
+			padding: 40px;
+			min-height: 250px;
+			background: #D0CCBD;
+			border-radius: 10px;
+			margin: 10px;
+			position: relative;
+
+
+
+			&:hover {
+				background: #B1B0AC;
+				transition: background .5s;
+				-webkit-box-shadow: 7px 11px 24px -1px rgba(0,0,0,0.49);
+				-moz-box-shadow: 7px 11px 24px -1px rgba(0,0,0,0.49);
+				box-shadow: 7px 11px 24px -1px rgba(0,0,0,0.49);
+			}
+
+			h1 {
+				font-family: 'Fjalla One', sans-serif;
+				margin-bottom: 0px;
+			}
+
+			&--text {
+				min-height: 80%;
+				font-size: 30px;
+				font-family: 'Amatic SC', cursive;
+
+			}
+			&--link {
+					position: absolute;
+					bottom: 10px;
+					left: 10px;
+					font-style: italic;
+			}
+		}
+}

@@ -1,0 +1,30 @@
+<html>
+<head>
+	<title>News</title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Shrikhand|Work+Sans|Playfair+Display+SC" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<ul class="navbar">
+			<li class="navbar__item"><a href="index.php">Wiki</a></li>
+			<li class="navbar__item"><a class="navbar__active" href="news.html">News</a></li>
+			<li class="navbar__item"><a href="contact.html">Contact</a></li>
+			<li class="navbar__item"><a href="#about">About</a></li>
+			<div class="search">
+				<input type="text" class="search__input" placeholder="Search..">
+				<input type="submit" class="search__submit" value="Search">
+			</div>
+		</ul>
+		<div class="title">
+			<h1 class="title__header">News Headlines</h1>
+			<hr>
+		</div>
+		<div class="article"></div>
+	</div>
+
+	<div class="scrollup"><img src="img/arrow.png" width="50" height="50"></div>
+	<script type="text/javascript" src="js/news_api.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+.wrapper {
+  margin: auto; }
+
+.form {
+  background: #D0CCBD;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  width: 50vw;
+  height: auto;
+  border-radius: 10px 50px;
+  padding: 20px 10px; }
+  .form__field {
+    flex: 1;
+    display: inline-block; }
+    .form__field input {
+      width: 300px;
+      height: 25px;
+      padding-left: 5px;
+      border-radius: 15px 0px;
+      margin: 0 10px 0 0px;
+      font-family: 'Amatic SC', cursive; }
+      .form__field input:focus {
+        background: #d4d7db; }
+  .form__comment {
+    width: auto;
+    height: 200px;
+    width: 80%;
+    flex-direction: flex-end;
+    align-self: center;
+    border-radius: 20px 20px 0px 0px;
+    padding: 5px;
+    font-family: 'Amatic SC', cursive;
+    font-style: italic;
+    resize: none; }
+    .form__comment:focus {
+      background: #d4d7db; }
+  .form__submit {
+    width: 80%;
+    height: 40px; }
+
+[field1] {
+  text-align: center;
+  flex: 1;
+  flex: 0 0 50%; }
+
+[field2] {
+  text-align: center; }
+
+[field3] {
+  text-align: center;
+  flex: 0 0 100%;
+  width: 70%; }
+
+/*# sourceMappingURL=contact.css.map */
