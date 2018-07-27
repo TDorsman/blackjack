@@ -11,7 +11,7 @@ $(document).ready(function() {
 	const playerStand = $('.playerhand__stand');
 
 	let playerPointsDiv = $('.playerpoints');
-	let dealerPointsDiv = document.querySelector('.dealerpoints');
+	let dealerPointsDiv = $('.dealerpoints');
 
 	let bet = 5000;
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
 	let pointsHiddenCard;
 	let dealerHiddenCard;
 
-	let t = 0;
+	let check = 0;
 
 	let cards = {
 		2: ['2C', '2D', '2H', '2S'],
@@ -59,14 +59,12 @@ $(document).ready(function() {
 	function startGame() {
 		playerHit.fadeOut(0);
 		playerStand.fadeOut(0);
-		if(t == 0) {
-			//Geef eerste kaart
+		if(check == 0) {
 			giveDealerCards(cards);
 			givePlayerCards(cards);
 		
 			const timer = setTimeout(() => {
-				//Geef tweede kaart
-				t = 1;
+				check = 1;
 				giveDealerCards(cards);
 				givePlayerCards(cards);
 				
@@ -84,7 +82,6 @@ $(document).ready(function() {
 			return;
 
 
-
 		let property = Math.floor(Math.random() * (10-2+1))  + 2;
 		let index = Math.floor(Math.random() * cards[property].length); 
 
@@ -94,30 +91,27 @@ $(document).ready(function() {
 			dealerCards.last().removeClass("animate");
 		}, 1000);
 
-		
-
 
 		if(cards[property][index].includes('A') && dealerPoints + 10 > 21)
 			dealerPoints += 1;
 		else
-			//Tel de kaart bij het totale op
 			dealerPoints += property;
 
 
-		dealerPointsDiv.innerHTML = dealerPoints;
+		dealerPointsDiv.html(dealerPoints);
 
 
 		//remove element from array
 		obj[property].splice(index, 1);
 
-		if(t == 1) {
+		if(check == 1) {
 			pointsHiddenCard = property;
 			dealerHiddenCard = dealerCards.children().last().attr("src");
 			console.log(dealerCards.children().last().attr("src"));
 			dealerCards.children().last().attr("src", "cards/purple_back.png");
 			playerHit.fadeIn();
 			playerStand.fadeIn();
-			dealerPointsDiv.innerHTML = (dealerPoints -= pointsHiddenCard);					
+			dealerPointsDiv.html(dealerPoints -= pointsHiddenCard);					
 		}
 	}
 
@@ -179,11 +173,11 @@ $(document).ready(function() {
 		playerStand.remove();
 		playerHit.remove();
 		//Draai de omgedraaide kaart om
-		if(t == 1) {
+		if(check == 1) {
 			dealerCards.children().last().attr("src", dealerHiddenCard);
 			console.log($('.dealercards:nth-child(2)'));
-			dealerPointsDiv.innerHTML = (dealerPoints += pointsHiddenCard);
-			t = 2;
+			dealerPointsDiv.html(dealerPoints += pointsHiddenCard);
+			check = 2;
 		}
 
 		//Dealer blijft pakken tot dat hij minimaal 17 heeft
