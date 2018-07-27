@@ -6,11 +6,11 @@ $(document).ready(function() {
 	const winnerDisplay = $('.winnerdisplay');
 	let winner = $('.winnerdisplay__winner');
 
-	const playerCards = document.querySelector('.playercards');
+	const playerCards = $('.playercards');
 	const playerHit = $('.playerhand__hit');
 	const playerStand = $('.playerhand__stand');
 
-	let playerPointsDiv = document.querySelector('.playerpoints');
+	let playerPointsDiv = $('.playerpoints');
 	let dealerPointsDiv = document.querySelector('.dealerpoints');
 
 	let bet = 5000;
@@ -32,7 +32,7 @@ $(document).ready(function() {
 		7: ['7C', '7D', '7H', '7S'],
 		8: ['8C', '8D',	'8H', '8S'],
 		9: ['9C', '9D',	'9H', '9S'],
-		10:	['10C', '10D', '10H', '10S',
+		10: ['10C', '10D', '10H', '10S',
 		'AC', 'AD', 'AH', 'AS',
 		'JC', 'JD', 'JH', 'JS',
 		'KC', 'KD', 'KH', 'KS',
@@ -70,10 +70,6 @@ $(document).ready(function() {
 				giveDealerCards(cards);
 				givePlayerCards(cards);
 				
-
-				if(t == 1) {
-
-				}
 			}, 1000)
 		}
 	}
@@ -116,7 +112,8 @@ $(document).ready(function() {
 
 		if(t == 1) {
 			pointsHiddenCard = property;
-			dealerHiddenCard = dealerCards.last().attr("src");
+			dealerHiddenCard = dealerCards.children().last().attr("src");
+			console.log(dealerCards.children().last().attr("src"));
 			dealerCards.children().last().attr("src", "cards/purple_back.png");
 			playerHit.fadeIn();
 			playerStand.fadeIn();
@@ -136,10 +133,10 @@ $(document).ready(function() {
 		let index = Math.floor(Math.random() * cards[property].length); 
 
 
-		playerCards.innerHTML += `<img src='cards/${cards[property][index]}.png' width='auto' height='100' class='cards animate'>`;
+		playerCards.append(`<img src='cards/${cards[property][index]}.png' width='auto' height='100' class='cards animate'>`);
 
 		setTimeout((index) => {
-			playerCards.lastChild.classList.remove("animate");
+			playerCards.last().removeClass("animate");
 		}, 1000);
 
 
@@ -148,7 +145,7 @@ $(document).ready(function() {
 		else
 			playerPoints += property;
 
-		playerPointsDiv.innerHTML = playerPoints;
+		playerPointsDiv.html(playerPoints);
 
 		//remove element from array
 		obj[property].splice(index, 1);
@@ -183,7 +180,7 @@ $(document).ready(function() {
 		playerHit.remove();
 		//Draai de omgedraaide kaart om
 		if(t == 1) {
-			$('.dealercards:nth-child(2)').attr("src", dealerHiddenCard);
+			dealerCards.children().last().attr("src", dealerHiddenCard);
 			console.log($('.dealercards:nth-child(2)'));
 			dealerPointsDiv.innerHTML = (dealerPoints += pointsHiddenCard);
 			t = 2;
