@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fjalla+One|Spirax|Playfair+Display+SC" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Amatic+SC|Fjalla+One|Spirax|Playfair+Display+SC|PT+Sans" rel="stylesheet">
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	</head>
 	<body>

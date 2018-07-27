@@ -1,9 +1,9 @@
 
 $(function() {
-	const btn = document.querySelector('.content__submit');
+	const btn = $('.content__submit');
 
 
-	btn.addEventListener('click', showWikipedia);
+	btn.on('click', showWikipedia);
 
 	document.onkeypress = (e) => {
 		if(e.keyCode == 13) {
@@ -14,16 +14,16 @@ $(function() {
 	function showWikipedia() {
 		let resultAmount = $(".content__amount :selected").val();
 
-		var searchTerm = $('.content__search').val();
+		let searchTerm = $('.content__search').val();
 		searchTerm = searchTerm.replace(/^\w/, function (chr) {
 			return chr.toUpperCase();
 		});
 
-		var result = $('.result');
+		let result = $('.result');
 		result.empty();
 		searchTerm = searchTerm.replace(/\s/g, '%20')
 
-		var url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + searchTerm + '&prop=revisions&prop=pageimages&rvprop=content&format=json&limit=' + resultAmount;
+		let url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=' + searchTerm + '&prop=revisions&prop=pageimages&rvprop=content&format=json&limit=' + resultAmount;
 		$.ajax( {
 			url: url,
 			dataType: 'json',
