@@ -1,8 +1,8 @@
 <?php
 // database logingegevens
 $db_hostname = 'localhost';
-$db_username = 'tim';
-$db_password = 'dorsman123';
+$db_username = 'root';
+$db_password = '';
 $db_database = 'blackjack';
 
 error_reporting(E_ERROR | E_PARSE);

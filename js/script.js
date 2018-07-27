@@ -54,26 +54,4 @@ $(function() {
 		} );
 
 	}
-
-	// function dictionary() {
-	// 	var url = 'https://api.pearson.com/v2/dictionaries/entries?headword=troll';
-	// 	$.ajax( {
-	// 		url: url,
-	// 		dataType: 'json',
-	// 		type: 'GET',
-	// 		contentType: "application/json; charset=utf-8",
-	// 		async: true,
-	// 		data: function(data, status, jqXHR) {
-	// 		},
-	// 		success: function(data) {
-	// 			console.log(data);
-	// 			//10 resultaten
-	// 		},
-	// 		error: function(data) {
-	// 			document.write("Something went wrong..");
-	// 		},
-	// 	} );
-	// }
-
-	// dictionary();
 });

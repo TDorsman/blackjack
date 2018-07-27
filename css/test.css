@@ -8,7 +8,6 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		overflow: hidden;
-
 	}
 
 	.randombtn {
@@ -59,8 +58,6 @@
 		font-family: 'Russo One', sans-serif;
 		margin: 5px 20px;
 	}
-
-
 
 	.winnerdisplay {
 		display: flex;

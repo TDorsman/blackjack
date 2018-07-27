@@ -10,7 +10,7 @@
 				<li class="navbar__item"><a class="navbar__active" href="index.php">Wiki</a></li>
 				<li class="navbar__item"><a href="news.html">News</a></li>
 				<li class="navbar__item"><a href="contact.html">Contact</a></li>
-				<li class="navbar__item"><a href="#about">About</a></li>
+				<li class="navbar__item"><a href="blackjack.php">Blackjack</a></li>
 			</ul>
 
 			<div class="title">

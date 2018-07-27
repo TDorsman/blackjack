@@ -106,7 +106,6 @@ $(document).ready(function() {
 		if(check == 1) {
 			pointsHiddenCard = property;
 			dealerHiddenCard = dealerCards.children().last().attr("src");
-			console.log(dealerCards.children().last().attr("src"));
 			dealerCards.children().last().attr("src", "cards/purple_back.png");
 			playerHit.fadeIn();
 			playerStand.fadeIn();
@@ -174,7 +173,6 @@ $(document).ready(function() {
 		//Draai de omgedraaide kaart om
 		if(check == 1) {
 			dealerCards.children().last().attr("src", dealerHiddenCard);
-			console.log($('.dealercards:nth-child(2)'));
 			dealerPointsDiv.html(dealerPoints += pointsHiddenCard);
 			check = 2;
 		}
