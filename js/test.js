@@ -1,10 +1,9 @@
 $(document).ready(function() {
 
-
 	const dealerCards = $('.dealercards');
 
 	const winnerDisplay = $('.winnerdisplay');
-	let winner = $('.winnerdisplay__winner');
+	const winner = $('.winnerdisplay__winner');
 
 	const playerCards = $('.playercards');
 	const playerHit = $('.playerhand__hit');
