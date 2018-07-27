@@ -39,9 +39,8 @@ $(document).ready(function() {
 		'QC', 'QD', 'QH', 'QS']
 	}
 
-	playerHit[0].addEventListener('click', hit);
-
-	playerStand[0].addEventListener('click', stand);
+	playerHit.on('click', hit);
+	playerStand.on('click', stand);
 
 	function updateMoney(newmoney, stat) {
 		$.post("updatemoney.php", { money: newmoney, status: stat});
@@ -53,6 +52,7 @@ $(document).ready(function() {
 			$(".playerhand__money").html("Money: " + data);
 		})
 	}
+
 	getMoney();
 
 
@@ -221,5 +221,3 @@ $(document).ready(function() {
 //TODO: Als je een Ace kaart krijgt en een 10 Value kaart bij de eerste TWEE kaarten dan heb je gewonnen (Blackjack).
 //DONE: Als je een Ace kaart krijgt en door die Ace kaart ga je busten dan wordt de Ace 1 waard ipv van 10.
 //TODO: Double Function: Zet 2x je inzet in en krijg 1 kaart.
-
-
