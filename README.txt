@@ -1,4 +1,4 @@
-Voeg de .sql aan je MySQL toe zodat je een bedrag kan zien.
+Voeg de .sql aan je MySQL Database toe zodat je een bedrag kan zien.
 
 Ik heb ook nog andere projecten die vooral met API's te maken hebben.
 
